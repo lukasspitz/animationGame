@@ -64,5 +64,5 @@ public class GeometricObject {
     public void moveTo(double x, double y){
     moveTo (new Vertex(x,y));
     } 
-    public void move {Vertex v {moveTo(pos.add(v));
-    }}
+   
+    }

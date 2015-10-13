@@ -29,25 +29,34 @@ public class Vertex {
 	public Vertex add(double s){//erzeugt neues Objekt an den Koord + s
 		return new Vertex(x+s, y+s);
 	}
+	
+    public Vertex add(Vertex v){
+        return new Vertex (x+v.x,y+v.y);
+	}
+    
 	public void  addMod (double x, double y){
 		x=this.x+x;
 		y=this.y+y;
 	}
+	
 	public void addMod(double s){//verschiebt Objekt um + s
 		x = x+s;
 		y = y+s;
 	}
+	
 	public Vertex sub(double s){
 		return new Vertex(x-s, y-s);
 	}
+	
 	public void subMod(double s){
 		x = x-s;
-		y= y-s;
-		
+		y= y-s;	
 	}
+	
 	public double getX(){
 		return x;
 	}
+	
 	public double getY(){
 		return y;
 	}

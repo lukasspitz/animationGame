@@ -14,12 +14,12 @@ public class GeometricObject {
 	if(this.width < 0){
 	this.width = -this.width;
 	pos.x = pos.x -this.width;
-		}
+	}
 		
 	if(this.height < 0){
 	this.height = -this.height;
 	pos.y = pos.y -this.height;
-		}
+	}
 	}
 	
 	public double getWidth(){
@@ -41,7 +41,7 @@ public class GeometricObject {
 	}
 	public GeometricObject (Vertex pos) {this(0,0,pos);
 	}
-	
+	public GeometricObject(){this()
     public String toString(){
 	return "width="+width+",height"+height+",pos="+pos;
  
@@ -64,5 +64,18 @@ public class GeometricObject {
     public void moveTo(double x, double y){
     moveTo (new Vertex(x,y));
     } 
-   
+    
+    public void move (Vertex v){moveTo(pos.add(v));
     }
+    
+    public boolean equals (Object thatObject){
+    if(thatObject instanceof GeometricObject)
+    {GeometricObject that = (GeometricObject)thatObject;
+    
+    return that.width==this.width && this.height==that.height 
+    && this.pos.equals(that.pos);
+    }
+    
+    return false;
+    }}
+    

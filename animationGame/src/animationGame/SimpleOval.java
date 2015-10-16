@@ -8,6 +8,9 @@ super (w,h,pos);
 public SimpleOval (double w, double h,double x, double y){
 super (w,h,new Vertex(x,y));
 }
+public SimpleOval (double w,Vertex pos){
+super (w,w,pos);
+}
 @Override public double area()
 {return Math.PI*width*height/4;
 }

@@ -1,22 +1,26 @@
 package animationGame;
 
 public class SimpleOval extends GeometricObject {
-public SimpleOval (double w, double h, Vertex pos){
+public SimpleOval (double w, double h, Vertex pos)
+{
 super (w,h,pos);
-
 }
-public SimpleOval (double w, double h,double x, double y){
+public SimpleOval (double w, double h,double x, double y)
+{
 super (w,h,new Vertex(x,y));
 }
-public SimpleOval (double w,Vertex pos){
+public SimpleOval (double w,Vertex pos)
+{
 super (w,w,pos);
 }
 @Override public double area()
-{return Math.PI*width*height/4;
+{
+return Math.PI*width*height/4;
 }
-@Override public String toString(){
-return "SimpleOval("+super.toString()+")";}
-
+@Override public String toString()
+{
+return "SimpleOval("+super.toString()+")";
+}
 @Override public boolean equals (Object that){
 return (that instanceof SimpleOval && super.equals(that));
 }

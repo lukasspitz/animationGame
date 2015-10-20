@@ -7,5 +7,5 @@ public class JFrameTest {
 		JFrame f=new JFrame("Hier könnte Ihre Werbung stehen");
 	    f.setVisible(true);
 	}
-
+   
 }
